@@ -19,25 +19,16 @@ $(".line").each(function(i) {
 
 var lines = $(".line");
 
-var i = 0;
-
-while (i < lines.length) {
-
-    var done = false;
-
-    var that = $(lines[i]);
-    that.animate({
-        marginTop: "-60px"
-    }, {
-        duration: 300,
-        queue: false
-    }, function() {
-         done = true;
-         return done;
-    });
-
- console.log(done)
-        i++;
-
-
+for (var i = 0; i < lines.length; i++) {
+    run(i);
 };
+
+function run(i) {
+    setTimeout(function() {
+        var that = $(lines[i]);
+        that.css({
+            "animation-duration": "3s",
+            "animation-name": "moveup"
+        });
+    }, 5 * i);
+}
