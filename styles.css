@@ -1,0 +1,44 @@
+.flag_container {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.flag {
+    position: absolute;
+    bottom: 75px;
+    left: 100px;
+    width: 302px;
+    height: 200px;
+    border: solid 1px limegreen;
+}
+
+.line {
+    width: 0;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.blue {
+    border-left: solid 1px #002b7f;
+}
+
+.yellow {
+    border-left: solid 1px #fcd116;
+}
+
+.red {
+    border-left: solid 1px #ce1126;
+}
+
+/* 
+Colors:
+
+blue - #002b7f
+yellow - #fcd116
+red - #ce1126
+
+*/
+
