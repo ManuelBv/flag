@@ -27,7 +27,7 @@ function run(i) {
     setTimeout(function() {
         var that = $(lines[i]);
         that.css({
-            "animation-duration": "3s",
+            "animation-duration": "2s",
             "animation-name": "moveup"
         });
     }, 5 * i);
