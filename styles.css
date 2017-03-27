@@ -21,6 +21,7 @@
     float: left;
 }
 
+
 .blue {
     border-left: solid 1px #002b7f;
 }
@@ -37,12 +38,8 @@
     0% {
         margin-top: 0;
     }
-    25% {
-        margin-top: -40px;
-    }
-
-    75% {
-        margin-top: 40px;
+    50% {
+        margin-top: 15px;
     }
     100% {
         margin-top: 0;

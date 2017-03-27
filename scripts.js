@@ -21,14 +21,13 @@ var lines = $(".line");
 
 for (var i = 0; i < lines.length; i++) {
     run(i);
-};
+}
 
 function run(i) {
     setTimeout(function() {
         var that = $(lines[i]);
         that.css({
-            "animation-duration": "2s",
-            "animation-name": "moveup"
+            "animation": "moveup 1s ease-in-out 0.1s infinite alternate"
         });
     }, 5 * i);
 }
