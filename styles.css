@@ -21,25 +21,74 @@
     float: left;
 }
 
-
 .blue {
     border-left: solid 1px #002b7f;
 }
 
 .yellow {
     border-left: solid 1px #fcd116;
+    margin-top: -5px;
 }
 
 .red {
     border-left: solid 1px #ce1126;
+    margin-top: -10px;
 }
 
 @keyframes moveup {
     0% {
         margin-top: 0;
     }
+    16% {
+        margin-top: -5px;
+    }
+    32% {
+        margin-top: -10px;
+    }
+    48% {
+        margin-top: -15px;
+    }
+    64% {
+        margin-top: -10px;
+    }
+    80% {
+        margin-top: -5px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes moveup1 {
+    0% {
+        margin-top: 0;
+    }
     50% {
-        margin-top: 15px;
+        margin-top: -5px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes moveup2 {
+    0% {
+        margin-top: -5px;
+    }
+    50% {
+        margin-top: -10px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes moveup3 {
+    0% {
+        margin-top: -10px;
+    }
+    50% {
+        margin-top: -15px;
     }
     100% {
         margin-top: 0;

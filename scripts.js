@@ -20,14 +20,21 @@ $(".line").each(function(i) {
 var lines = $(".line");
 
 for (var i = 0; i < lines.length; i++) {
-    run(i);
+
+    if (i < 51) {
+        run(i, "moveup1");
+    } else if (i > 50 && i < 151) {
+        run(i, "moveup2");
+    } else if (i > 150 && i < 304) {
+        run(i, "moveup3");
+    }
 }
 
-function run(i) {
+function run(i, animation) {
     setTimeout(function() {
         var that = $(lines[i]);
         that.css({
-            "animation": "moveup 1s ease-in-out 0.1s infinite alternate"
+            "animation": animation + " 1s ease-in-out 0.1s infinite alternate"
         });
     }, 5 * i);
 }
