@@ -1,32 +1,35 @@
-for (var i = 0; i < 304; i++) {
+for (var i = 0; i < 100; i++) {
 
     var line = "<div class='line'></div>";
     $(".flag").append(line);
 
 }
+var lines = $(".line");
+var oneThird = Math.floor(lines.length / 3);
+var twoThirds = Math.floor(lines.length * (2 / 3));
 
 $(".line").each(function(i) {
 
-    if (i < 101) {
+    if (i < oneThird) {
         $(this).addClass("blue");
-    } else if (i > 101 && i < 201) {
+    } else if (i > oneThird && i < twoThirds) {
         $(this).removeClass("blue").addClass("yellow");
-    } else if (i > 201 && i < 304) {
+    } else if (i > twoThirds && i < lines.length) {
         $(this).removeClass("yellow").addClass("line red");
     }
 
 });
 
-var lines = $(".line");
+
 
 for (var i = 0; i < lines.length; i++) {
 
-    if (i < 51) {
-        run(i, "moveup1");
-    } else if (i > 50 && i < 151) {
+    if (i < oneThird) {
         run(i, "moveup2");
-    } else if (i > 150 && i < 304) {
-        run(i, "moveup3");
+    } else if (i > oneThird && i < twoThirds) {
+        run(i, "moveup2");
+    } else if (i > twoThirds && i < lines.length) {
+        run(i, "moveup2");
     }
 }
 
@@ -34,7 +37,7 @@ function run(i, animation) {
     setTimeout(function() {
         var that = $(lines[i]);
         that.css({
-            "animation": animation + " 1s ease-in-out 0.1s infinite alternate"
+            "animation": animation + " 1s ease-in-out 1s infinite alternate"
         });
-    }, 5 * i);
+    }, 15 * i);
 }
